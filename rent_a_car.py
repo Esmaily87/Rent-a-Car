@@ -24,7 +24,7 @@ class Locadora:
         # Aluga um carro disponível, dado seu ID.
         carro = self.buscar_modelo_por_id(id_carro, self.carros_disponiveis)
         if carro:  # Verifica se o carro foi encontrado.
-            dias = int(input('Por quantos dias irá alugar? : '))
+            dias = entrada_inteiro('Por quantos dias irá alugar? : ')
             valor = dias * carro[2]  # Calcula o custo total do aluguel.
             print(f"Você alugará o {carro[1]} por {dias} dias. Total: R$ {valor}")
             confirmar = input('Deseja confirmar? (sim/não): ').lower()
